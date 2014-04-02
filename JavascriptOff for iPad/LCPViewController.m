@@ -73,7 +73,7 @@
 }
 
 - (IBAction)openAction:(id)sender {
-    if([addressBar.text length]<7 || (![[addressBar.text substringToIndex:7] isEqualToString:@"http://"] && ![[addressBar.text substringToIndex:8] isEqualToString:@"https://"])) {
+    if([addressBar.text length]<8 || (![[addressBar.text substringToIndex:7] isEqualToString:@"http://"] && ![[addressBar.text substringToIndex:8] isEqualToString:@"https://"])) {
         addressBar.text = [NSString stringWithFormat:@"http://%@", addressBar.text];
     }
     currentURL = [NSURL URLWithString:[addressBar.text stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding]];
